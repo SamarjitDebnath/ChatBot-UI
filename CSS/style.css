@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.toggle {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    background-image: -webkit-linear-gradient(left, #8a2387, #e94057, #f27121);
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.toggle::before {
+    position: absolute;
+    content: "\f003";
+    text-align: center;
+    font-family: fontAwesome;
+    width: 100%;
+    height: 100%;
+    right: 1px;
+    bottom: 5px;
+}
+
+.toggle.active::before {
+    content: "\f2b7";
+}
+
+.wrapper {
+    position: absolute;
+    right: 30px;
+    bottom: 85px;
+    display: none;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.wrapper.active {
+    display: block;
+    transition: all 0.4s ease;
+}
+
+.head-text {
+    background-image: -webkit-linear-gradient(left, #8a2387, #e94057, #f27121);
+    border-radius: 15px 15px 0 0;
+    color: #fff !important;
+    line-height: 65px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.chat-box {
+    padding: 20px;
+    width: 100%;
+}
+
+.chat-box .desc-text {
+    color: #515365;
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.chat-box form {
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border: 1px solid lightgrey;
+}
+
+.chat-box form .field:last-child {
+    margin-bottom: 15px;
+}
+
+.name, .email, #message {
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+input, button, textarea {
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid lightgray;
+    font-size: 17px;
+    transition: all 0.4s ease;
+}
+
+button {
+    border-radius: 25px;
+    margin-top: 20px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    color: #fff !important;
+    font-size: 18px;
+    background-image: -webkit-linear-gradient(left, #8a2387, #e94057, #f27121);
+    transform: all 0.4s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.name::placeholder, .email::placeholder, #message::placeholder {
+    color: silver;
+    transition: all 0.4s ease;
+}
+
+.name:focus::placeholder, .email:focus::placeholder, #message:focus::placeholder {
+    color: lightgray;
+    transition: all 0.4s ease;
+}
+
+.name:focus, .email:focus, #message:focus, button:focus {
+    outline: 0px transparent !important;
+    border-color: #fc83bb;
+}
+
+#message {
+    height: 70px;
+    width: 100%;
+    resize: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-size: 17px;
+}
